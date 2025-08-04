@@ -1,0 +1,24 @@
+# Dossiers à ignorer
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+
+# VS Code
+.vscode/
+
+# Migrations temporaires
+Migrations/
+
+# Fichiers sensibles
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Node (si tu as un frontend JS plus tard)
+node_modules/
+
+# Build
+dist/

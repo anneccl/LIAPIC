@@ -1,0 +1,6 @@
+@Liapic.Api_HostAddress = http://localhost:5223
+
+GET {{Liapic.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
