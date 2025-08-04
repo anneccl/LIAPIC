@@ -1,6 +1,6 @@
 /// <summary> 
 /// Représente un utilisateur inscrit sur la plateforme Liapic.
-/// Contient ses informations de profil, de connexion et de description.
+/// Contient ses informations de profil, de connexion et une biographie.
 /// </summary>
 [Table("Utilisateurs")]
 public class Utilisateur
