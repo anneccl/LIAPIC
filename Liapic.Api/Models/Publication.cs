@@ -1,3 +1,7 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+namespace Liapic.Api.Models;
+
 /// <summary>
 /// Représente une publication partagée par un utilisateur.
 /// Peut contenir un média, une description et une visibilité (amis ou public).
@@ -6,13 +10,13 @@
 public class Publication
 {
     [Key]
-    public int Id { get; set; }
+    public  int Id { get; set; }
 
     [Required]
     public int UtilisateurId { get; set; }
 
     [ForeignKey(nameof(UtilisateurId))]
-    public Utilisateur Utilisateur { get; set; }
+    public required Utilisateur Utilisateur { get; set; }
 
     [MaxLength(500)]
     public string? Description { get; set; }
@@ -22,7 +26,7 @@ public class Publication
     public VisibilitePost Visibilite { get; set; }
 
     [Required]
-    public string MediaUrl { get; set; }
+    public required string MediaUrl { get; set; }
 
     public DateTime DatePublication { get; set; } = DateTime.UtcNow;
 }
@@ -32,6 +36,6 @@ public class Publication
 /// </summary>
 public enum VisibilitePost
 {
-    Amis = 0,
-    Public = 1
+    Public = 0,
+    Amis = 1
 }

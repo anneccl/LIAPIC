@@ -1,3 +1,7 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+namespace Liapic.Api.Models;
+
 /// <summary> 
 /// Représente un utilisateur inscrit sur la plateforme Liapic.
 /// Contient ses informations de profil, de connexion et une biographie.
@@ -10,26 +14,26 @@ public class Utilisateur
 
     [Required]
     [MaxLength(50)]
-    public string Nom { get; set; }
+    public required string Nom { get; set; }
 
     [Required]
     [MaxLength(50)]
-    public string Prenom { get; set; }
+    public required string Prenom { get; set; }
 
     [Required]
     [MaxLength(30)]
-    public string NomUtilisateur { get; set; }
+    public required string NomUtilisateur { get; set; }
 
     [Required]
     [EmailAddress]
-    public string Email { get; set; }
+    public required string Email { get; set; }
 
     [Required]
     [DataType(DataType.Password)]
-    public string MotDePasse { get; set; }
+    public required string MotDePasse { get; set; }
 
     [MaxLength(280)]
-    public string Biographie { get; set; }
+    public required string Biographie { get; set; }
 
     [Url]
     public string? PhotoProfilUrl { get; set; }
