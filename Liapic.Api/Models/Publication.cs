@@ -18,7 +18,7 @@ public class Publication
     [ForeignKey(nameof(UtilisateurId))]
     public required Utilisateur Utilisateur { get; set; }
 
-    [MaxLength(500)]
+    [MaxLength(1000)]
     public string? Description { get; set; }
 
     [Required]

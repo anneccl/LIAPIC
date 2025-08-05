@@ -33,7 +33,7 @@ public class Utilisateur
     public required string MotDePasse { get; set; }
 
     [MaxLength(280)]
-    public required string Biographie { get; set; }
+    public string? Biographie { get; set; }
 
     [Url]
     public string? PhotoProfilUrl { get; set; }
